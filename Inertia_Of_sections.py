@@ -25,3 +25,4 @@ def Hollow_Circular_Section(D,d):
 
 T = Hollow_Circular_Section(100,90)
 print(T)
+
