@@ -17,6 +17,21 @@ def Profile_Select(FilePath,ProfileType,ProfielSize):
     ProfileName = ProfileType + ProfielSize
     Profile_df = df.loc[ProfileName]
 
+    Profile_df[10] = Profile_df[10] * 10**6 #Second moment of area 
+    Profile_df[12] = Profile_df[12] * 10**3 #Elastic section modulus 
+    Profile_df[13] = Profile_df[13] * 10**3 #Plastic section modulus 
+
+    Profile_df[14] = Profile_df[14] * 10**6 #Second moment of area 
+    Profile_df[16] = Profile_df[16] * 10**3 #Elastic section modulus 
+    Profile_df[17] = Profile_df[17] * 10**3 #Plastic section modulus
+
+    Profile_df[18] = Profile_df[18] * 10**3 #Torsion constant	
+    Profile_df[19] = Profile_df[19] * 10**3 #Torsion modulus	
+    Profile_df[20] = Profile_df[20] * 10**6 #Warping constant	 
+    Profile_df[21] = Profile_df[21] * 10**3 #Warping modulus	
+
+    
+
     Profile_dimensions = Profile_df[0:2]
     Area_properties = Profile_df[2:10]
     Inertia_properties_about_major_axis_yy = Profile_df[10:14]
